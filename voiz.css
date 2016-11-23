@@ -6,19 +6,22 @@ body {
 }
 
 #header {
-  display: block;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
   margin: 0;
   padding: auto;
 }
-
+#service_logo {
+  margin-right: auto;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+}
 h1 img{
-  float: left;
   width: 210px;
   height: 56px;
-}
-
-#haeder_top {
-  float: right;
 }
 #haeder_top ul {
   list-style: none;
@@ -53,67 +56,70 @@ h1 img{
 }
 
 .Main {
-  clear: both;
   margin: auto;
   padding: auto;
 }
 .MainContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: auto;
-  overflow: hidden;
-  float: left;
   width: 924px;
   height: 560px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%,-50%)
 }
-.MainContent ul{
-  list-style: none;
-  padding: 0;
-}
-.MainContent ul li {
-  display: inline;
-}
+
 .MainContent .iphone_area {
-  float: left;
   margin: 0;
   padding: 0;
   width: 308px;
   height: 560px;
 }
 #iphone img{
-  margin: 0;
   width: 308px;
   height: 560px;
 }
 
 .MainContent .content_area {
   width: 588px;
-  height: 460px;
-  margin: auto 0 auto 336px;
-  padding: auto 28px;
+  height: 406px;
+  padding: 0 28px;
 }
 
 .MainContent .content_area h2{
-margin-top:5px;
-font-family: 'Avenir Next', 'Montserrat', sans-serif;
-font-weight: 400;
-font-size: 56px;
-line-height: 1.125;
-color: #fff;
-
+  margin: 0;
+  margin-top:5px;
+  font-family: 'Avenir Next', 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 1.125;
+  color: #fff;
 }
 .MainContent .content_area h3{
-margin-top:23px;
-font-family: 'Avenir Next', 'Montserrat', sans-serif;
-font-weight: 400;
-font-size: 21px;
-line-height: 1.33333;
-color: #fff;
+  margin: 0;
+  margin-top:23px;
+  font-family: 'Avenir Next', 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 1.33333;
+  color: #fff;
 }
+
 .store_link ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
 }
 .store_link ul li{
-  float: left;
-  margin: 35px 14px 30px 0;
+  margin-right: 14px;
+  margin-top: 35px;
+  margin-bottom: 30px;
 }
 
 .store_link ul li img {
@@ -122,10 +128,18 @@ color: #fff;
 }
 
 .sideber {
-  float: right;
   width: 42px;
+  height: 252px;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  right: 0%;
+  transform: translate(-50%,-50%);
 }
 .sideber #shere ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -133,10 +147,19 @@ color: #fff;
   height: 252px;
 }
 .sideber #shere ul li{
+  margin:0;
+  padding: 0;
+  width: 28px;
+  height: 28px;
   margin-top: 14px;
-  text-align: center;
+}
+.sideber #shere ul li:first-child {
+  width: 28px;
+  height: 14px;
+  margin-top: 0;
 }
 .sideber #shere ul li p{
+  margin: 0;
   font-family: 'Avenir Next', 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -152,26 +175,41 @@ color: #fff;
 }
 
 footer {
-  clear: both;
-  overflow: hidden;
-  display:block;
+  width:100%;
   padding: auto 0;
+  position: absolute;
+  bottom: 0%;
 }
 footer ul{
+  margin: 0;
+  padding: 0;
+  display:flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
   list-style: none;
 }
-footer ul li{
-  float: left;
+footer ul li a{
+  text-decoration: none;
   margin-right: 28px;
   font-family: 'Avenir Next', 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 1;
   color: #fff;
-
 }
-footer p {
-  float: right;
+footer ul li a::before {
+left: 14px;
+box-sizing: border-box;
+width: 14px;
+height: 14px;
+border: 14px solid transparent;
+border-left: 14px solid #fff;
+}
+
+footer ul li:last-child {
+  margin: 0;
+  margin-left: auto;
   font-family: 'Avenir Next', 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 13px;
