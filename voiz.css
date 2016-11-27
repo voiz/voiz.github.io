@@ -1,6 +1,9 @@
 @charset "utf-8";
+/*html,body{
+overflow-x: hidden;
+}*/
 body {
-  margin: 28px;
+  margin: 28px 28px auto 28px;
   padding: 0;
   background-image: url(./voiz_images/bg_body.png);
 }
@@ -60,6 +63,7 @@ h1 img{
   padding: auto;
 }
 .MainContent {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,8 +73,7 @@ h1 img{
   position: absolute;
   top: 50%;
   left: 50%;
-
-  transform: translate(-50%,-50%)
+  transform: translate(-50%,-50%);
 }
 
 .MainContent .iphone_area {
@@ -85,8 +88,10 @@ h1 img{
 }
 
 .MainContent .content_area {
+  box-sizing: border-box;
   width: 588px;
   height: 406px;
+  margin: 0 0 0 28px;
   padding: 0 28px;
 }
 
@@ -174,21 +179,36 @@ h1 img{
   height: 28px;
 }
 
+
 footer {
-  width:100%;
-  padding: auto 0;
+  right: 0px;
+  width: 100%;
   position: absolute;
   bottom: 0%;
+
 }
+
 footer ul{
-  margin: 0;
+  margin: 0 28px 28px 28px;
   padding: 0;
   display:flex;
   flex-direction: row;
   align-items: flex-end;
-  justify-content: flex-start;
   list-style: none;
 }
+
+.arrow {
+  font-size: smaller;
+  color: #fff;
+  opacity: .75;
+  /*width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #fff;*/
+}
+
 footer ul li a{
   text-decoration: none;
   margin-right: 28px;
@@ -198,18 +218,12 @@ footer ul li a{
   line-height: 1;
   color: #fff;
 }
-footer ul li a::before {
-left: 14px;
-box-sizing: border-box;
-width: 14px;
-height: 14px;
-border: 14px solid transparent;
-border-left: 14px solid #fff;
-}
+
 
 footer ul li:last-child {
   margin: 0;
   margin-left: auto;
+  padding: 0;
   font-family: 'Avenir Next', 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 13px;
