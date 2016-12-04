@@ -49,6 +49,7 @@ h1 img{
 #language ul li a.current{
   opacity: 1;
 }
+
 #homepage a {
   margin-left: 20px;
   font-family: 'Avenir Next', 'Montserrat', sans-serif;
@@ -198,7 +199,8 @@ footer ul{
 }
 
 .arrow {
-  font-size: smaller;
+  margin: 0;
+  font-size: 30%;
   color: #fff;
   opacity: .75;
   /*width: 0;
@@ -219,7 +221,6 @@ footer ul li a{
   color: #fff;
 }
 
-
 footer ul li:last-child {
   margin: 0;
   margin-left: auto;
@@ -230,4 +231,51 @@ footer ul li:last-child {
   line-height: 1;
   color: #fff;
   opacity: .75;
+}
+
+
+@media screen and (max-width : 767px) {
+
+
+
+  h1,
+  #haeder_top,
+  .iphone_area,
+  h2,h3,
+  .store_link,
+  .sideber,
+  footer ul li a {
+    width: 100%;
+  }
+
+  #header {
+    height: 100px;
+    display:flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  h1 {
+    width: 100%;
+    justify-content:center;
+    margin-bottom: 28px;
+  }
+  h1 #service_logo {
+    justify-content:center;
+    height: 56px;
+  }
+  #haeder_top {
+    display:flex;
+    height: 42px;
+    width: 100%;
+  }
+  #homepage {
+   margin-left: auto;
+  }
+
+  #iphone img {
+    max-width: 100%;
+  }
+
+
+
 }
