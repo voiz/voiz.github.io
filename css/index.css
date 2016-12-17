@@ -171,14 +171,19 @@ ul {
     display: flex;
     flex-direction: row;
     list-style: none;
-    margin: 0;
+    margin: 35px 0 30px 0;
     padding: 0;
   }
 
   .store-link ul li{
-    margin-bottom: 30px;
-    margin-right: 14px;
-    margin-top: 35px;
+    height: 40px;
+    margin: 0 14px 0 0;
+  }
+
+  .store-link ul li a{
+    height: 40px;
+    margin: 0;
+    width: 135px;
   }
 
   .store-link ul li img {
@@ -204,7 +209,7 @@ ul {
     height: 252px;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding:0 0 0 7px;
     width: 28px;
   }
 
