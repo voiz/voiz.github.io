@@ -22,48 +22,177 @@ footer,header,nav,div, {
   display: block;
 }
 
-ul {
+/* Common */
+html {
+  height: 100%;
+  width:100%;
+}
+
+body {
+  background-image: url(../img/bg_body.png);
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: 'Avenir Next', 'Montserrat', sans-serif;
+  font-weight: 400;
+  height: 100%;
+  margin: 0;
+  padding: 28px;
+}
+
+li {
+  display: inline;
   list-style: none;
 }
 
+.container {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+header {
+  margin: 0;
+}
+
+#service-logo {
+  height: 56px;
+  margin: 0;
+}
+
+h1 {
+  height: 56px;
+  margin: 0;
+  padding: 0;
+}
+
+h1 img {
+  height: 56px;
+  width: 210px;
+}
+
+#language {
+  margin: 0;
+  padding: 0;
+}
+
+#language ul {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#language ul li span {
+  font-size: 180%;
+  opacity: .3;
+}
+
+#language ul li a {
+  color: #fff;
+  opacity: .6;
+  text-decoration: none;
+}
+
+#language ul li a.current {
+  opacity: 1;
+}
+
+#iphone img {
+  height: 560px;
+  width: 308px;
+}
+
+.store-link ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+
+.store-link ul li {
+  height: 40px;
+  margin: 0 14px 0 0;
+}
+
+.store-link ul li img {
+  height: 40px;
+  width: 135px;
+}
+
+#share ul{
+  margin: 0;
+}
+
+.sidebar img {
+  height: 28px;
+  margin: 0;
+  padding: 0;
+  width: 28px;
+}
+
+.sidebar #share ul li p {
+  font-size: 12px;
+  line-height: 1;
+  margin: 0;
+  opacity: .75;
+}
+
+#share ul li {
+  height: 28px;
+  margin: 0;
+  padding: 0;
+  width: 28px;
+}
+
+.sidebar #share ul li:first-child {
+  display: flex;
+  height: 28px;
+}
+
+footer {
+  bottom: 0%;
+  right: 0px;
+  width: 100%;
+}
+
+footer ul {
+  display: flex;
+  padding: 0;
+}
+
+.arrow {
+  font-size: 60%;
+  margin: 0;
+  opacity: .75;
+}
+
+footer ul li a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.inc {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+  padding: 0;
+}
+
 /* wide size */
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 991px) {
 
   /*.narrow h2とh3 を消す*/
   .narrow {
     display: none;
   }
 
-  html {
-    height: 100%;
-    width:100%;
-  }
-
-  body {
-    background-image: url(../img/bg_body.png);
-    background-size: 100% 100%;
-    box-sizing: border-box;
-    color: #fff;
-    font-family: 'Avenir Next', 'Montserrat', sans-serif;
-    height: 100%;
-    margin: 0;
-    padding: 28px;
-  }
-
-  li {
-    display: inline;
-  }
-
-  .container {
-    height: 100%;
-    position: relative;
-  }
-
   header {
     align-items: flex-start;
     display: flex;
     justify-content: flex-end;
-    margin: 0;
     padding: auto;
     vertical-align:top;
   }
@@ -72,42 +201,12 @@ ul {
     margin-right: auto;
   }
 
-  h1 {
-    margin: 0;
-    padding: 0;
-  }
-
-  h1 img{
-    height: 56px;
-    width: 210px;
-
-  }
-
   #language ul {
     align-items:center;
     color: #fff;
     display: flex;
     flex-direction: row;
-    font-size: 14px;
-    font-weight: 500;
     line-height: 1;
-    list-style: none;
-    margin: 0;
-  }
-
-  #language ul li span{
-    font-size: 180%;
-    opacity: .3;
-  }
-
-  #language ul li a{
-    color: #fff;
-    opacity: .6;
-    text-decoration: none;
-  }
-
-  #language ul li a.current{
-    opacity: 1;
   }
 
   .main-content {
@@ -128,11 +227,6 @@ ul {
     height: 560px;
     margin: 0;
     padding: 0;
-    width: 308px;
-  }
-
-  #iphone img{
-    height: 560px;
     width: 308px;
   }
 
@@ -163,27 +257,7 @@ ul {
   }
 
   .store-link ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
     margin: 35px 0 30px 0;
-    padding: 0;
-  }
-
-  .store-link ul li{
-    height: 40px;
-    margin: 0 14px 0 0;
-  }
-
-  .store-link ul li a{
-    height: 40px;
-    margin: 0;
-    width: 135px;
-  }
-
-  .store-link ul li img {
-    height: 40px;
-    width: 135px;
   }
 
   .sidebar {
@@ -203,62 +277,27 @@ ul {
     flex-direction: column;
     height: 252px;
     list-style: none;
-    margin: 0;
     padding:0 0 0 7px;
     width: 28px;
   }
 
   #share ul li{
-    height: 28px;
-    margin: 0;
     margin-top: 14px;
-    padding: 0;
-    width: 28px;
   }
 
   .sidebar #share ul li:first-child {
-    display: flex;
     height: 14px;
     margin-top: 0;
-    width: 28px;
-  }
-
-  .sidebar #share ul li p{
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1;
-    margin: 0;
-    opacity: .75;
-  }
-
-  .sidebar img{
-    height: 28px;
-    margin: 0;
-    padding: 0;
-    width: 28px;
   }
 
   footer {
-    bottom: 0%;
     position: absolute;
-    right: 0px;
-    width: 100%;
   }
 
   footer ul{
     align-items: flex-end;
-    display:flex;
     flex-direction: row;
-    list-style: none;
     margin: 0;
-    padding: 0;
-  }
-
-  .arrow {
-    color: #fff;
-    font-size: 60%;
-    margin: 0;
-    opacity: .75;
   }
 
   footer ul li p{
@@ -266,65 +305,28 @@ ul {
   }
 
   footer ul li a{
-    color: #fff;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1;
     margin-right: 28px;
-    text-decoration: none;
   }
 
   .inc {
-    color: #fff;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 1;
-    margin: 0;
-    margin-left: auto;
+    margin: 0 0 0 auto;
     opacity: .75;
-    padding: 0;
   }
 
 }
 
 /*narrow size*/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 990px) {
 
   .wide {
-   display: none;
-  }
-
-  html,body {
-    margin:0px;
-    height: 100%;
-    width: 100%;
+    display: none;
   }
 
   body {
     background-color: #0a1319;
-    background-image: url(../img/bg_body.png);
     background-repeat:no-repeat;
-    background-size: 100% 100%;
-    box-sizing: border-box;
-    color: #fff;
-    font-family: 'Avenir Next', 'Montserrat', sans-serif;
-    font-weight: 400;
     height:auto !important;
-    margin: 0;
-    min-height:100%;
-    padding: 28px;
-    position:relative;
     text-align: center;
-  }
-
-  li {
-    display: inline;
-  }
-
-  .container {
-    height: 100%;
-    position: relative;
-    width: 100%;
   }
 
   header {
@@ -332,30 +334,11 @@ ul {
     display:flex;
     flex-direction: column-reverse;
     height: 98px;
-    margin: 0;
     margin-bottom: 28px;
-    width: 100%;
-  }
-
-  #service-logo {
-    height: 56px;
-    margin: 0;
-  }
-
-  h1 {
-    margin: 0;
-    padding: 0;
-  }
-
-  h1 img {
-    height: 56px;
-    width: 210px;
   }
 
   #language {
     height: 42px;
-    margin: 0;
-    padding: 0;
     width: 100%;
   }
 
@@ -363,35 +346,12 @@ ul {
     align-items: center;
     display: flex;
     flex-direction: row;
-    font-size: 14px;
-    font-weight: 500;
     justify-content:flex-end;
-    margin: 0;
-    padding: 0;
-  }
-
-  #language ul li span {
-    font-size: 180%;
-    opacity: .3;
-  }
-
-  #language ul li a {
-    color: #fff;
-    opacity: .6;
-    text-decoration: none;
-  }
-
-  #language ul li a.current {
-    opacity: 1;
   }
 
   #iphone {
     height: 560px;
     margin: 0;
-  }
-
-  #iphone img {
-    height: 560px;
   }
 
   .narrow h2 {
@@ -413,20 +373,12 @@ ul {
   }
 
   .store-link ul {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     margin: 36px 0 43px 0;
-    padding: 0;
   }
 
   .store-link ul li {
-    height: 40px;
-    margin-right: 14px;
-  }
-
-  .store-link ul li img {
-    width: 135px;
+    margin: 0 14px;
   }
 
   .sidebar {
@@ -441,51 +393,20 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 0;
     padding: 0;
   }
 
   #share ul li {
-    height: 28px;
-    margin: 0;
-    margin-right: 14px;
-    padding: 0;
-    width: 28px;
+    margin: 0 7px;
   }
 
   .sidebar #share ul li:first-child {
     align-items: center;
-    display: flex;
-    height: 28px;
-  }
-
-  .sidebar #share ul li p {
-    color: #fff;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1;
-    margin: 0;
-    opacity: .75;
-  }
-
-  .sidebar img {
-    height: 28px;
-    margin: 0;
-    padding: 0;
-    width: 28px;
-  }
-
-  footer {
-    bottom: 0%;
-    right: 0px;
-    width: 100%;
   }
 
   footer ul {
-    display: flex;
     flex-direction:column;
     margin: 27px 0 0 0;
-    padding: 0;
   }
 
   .link {
@@ -493,20 +414,8 @@ ul {
     height: 14px;
   }
 
-  .arrow {
-    color: #fff;
-    font-size: 60%;
-    margin: 0;
-    opacity: .75;
-  }
-
   footer ul li a {
-    color: #fff;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1;
     margin: 0 14px;
-    text-decoration: none;
   }
 
   footer ul li p {
@@ -518,11 +427,7 @@ ul {
   }
 
   .inc {
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 1;
     margin-top: 28px;
-    padding: 0;
   }
 
 }
