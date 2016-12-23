@@ -170,6 +170,7 @@ footer ul li a {
   color: #fff;
   font-size: 14px;
   font-weight: 500;
+  margin: 0;
   line-height: 1;
   text-decoration: none;
 }
@@ -327,7 +328,6 @@ footer ul li a {
     background-repeat:no-repeat;
     height:auto !important;
     text-align: center;
-    width:auto !impotrant;
   }
 
   header {
@@ -395,10 +395,6 @@ footer ul li a {
     margin: 36px 0 43px 0;
   }
 
-  .store-link ul li {
-    margin: 0 14px;
-  }
-
   .sidebar {
     border-bottom: 1px solid #aaa;
     border-top: 1px solid #aaa;
@@ -434,7 +430,7 @@ footer ul li a {
     height: 14px;
   }
 
-  footer ul li a {
+  footer ul li {
     margin: 0 14px;
   }
 

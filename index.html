@@ -8,6 +8,13 @@
 <link rel="stylesheet" href="css/index.css">
 <link rel="shortcut icon" href="img/favicon.ico">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" >
+<script src="js/jquery-3.1.1.min.js" charset="utf-8"></script>
+<script src="js/jquery-localize-master/dist/jquery.localize.js" charset="utf-8"></script>
+  <script>
+  $(document).ready(function(){
+  $("[data-localize]").localize("loc", { skipLanguage: "en" })
+  });
+  </script>
 </head>
 <body>
   <div class="container">
@@ -67,10 +74,12 @@
         <ul>
           <div class="link">
             <li>
-              <a href="#"><span class="arrow">▶︎</span>Terms of Use</a>
+              <span class="arrow">▶︎</span>
+              <a data-localize="TermsofUse">Terms of Use</a>
             </li>
             <li>
-              <a href="#"><span class="arrow">▶︎</span>Privacy Policy</a>
+              <span class="arrow">▶︎</span>
+              <a data-localize="PrivacyPolicy">Privacy Policy</a>
             </li>
           </div>
           <div class="inc">
