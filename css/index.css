@@ -182,7 +182,7 @@ footer ul li a {
 }
 
 /* wide size */
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 991px) and (min-height: 671px) {
 
   /*.narrow h2とh3 を消す*/
   .narrow {
@@ -316,7 +316,7 @@ footer ul li a {
 }
 
 /*narrow size*/
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 990px), screen and (max-height: 670px) {
 
   .wide {
     display: none;
@@ -327,6 +327,7 @@ footer ul li a {
     background-repeat:no-repeat;
     height:auto !important;
     text-align: center;
+    width:auto !impotrant;
   }
 
   header {
@@ -349,18 +350,34 @@ footer ul li a {
     justify-content:flex-end;
   }
 
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: auto;
+    width: 100%;
+  }
+
   #iphone {
     height: 560px;
     margin: 0;
   }
 
   .narrow h2 {
+    display: block;
     font-weight: 400;
     font-size: 28px;
     line-height: 1.25;
     margin: 0;
     margin-bottom: 14px;
     order: 1;
+  }
+
+  .content-area {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
   }
 
   .narrow h3 {
@@ -373,6 +390,7 @@ footer ul li a {
   }
 
   .store-link ul {
+    display: block;
     justify-content: center;
     margin: 36px 0 43px 0;
   }
@@ -390,6 +408,7 @@ footer ul li a {
   }
 
   #share ul {
+    text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -405,6 +424,7 @@ footer ul li a {
   }
 
   footer ul {
+    display: block;
     flex-direction:column;
     margin: 27px 0 0 0;
   }
