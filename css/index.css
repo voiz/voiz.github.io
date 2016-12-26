@@ -1,0 +1,402 @@
+@charset "utf-8";
+
+/*リセットCSS*/
+html, body, div, span,
+h1, h2, h3, p,img,
+ul, li, a,
+footer, header, menu, nav, {
+  border:0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+footer,header,nav,div, {
+  display: block;
+}
+
+/* Common */
+html {
+  height: 100%;
+  width:100%;
+}
+
+body {
+  background-image: url(../img/bg_body.png);
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: 'Avenir Next', 'Montserrat', sans-serif;
+  font-weight: 400;
+  height: 100%;
+  margin: 0;
+  padding: 28px;
+}
+
+li {
+  display: inline;
+  list-style: none;
+}
+
+.container {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+header {
+  margin: 0;
+}
+
+#service-logo {
+  height: 56px;
+  margin: 0;
+}
+
+h1 {
+  height: 56px;
+  margin: 0;
+  padding: 0;
+}
+
+h1 img {
+  height: 56px;
+  width: 210px;
+}
+
+#iphone img {
+  height: 560px;
+  width: 308px;
+}
+
+.store-link ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+
+.store-link ul li {
+  height: 40px;
+  margin: 0 14px 0 0;
+}
+
+.store-link ul li img {
+  height: 40px;
+  width: 135px;
+}
+
+#share ul{
+  margin: 0;
+}
+
+.sidebar img {
+  height: 28px;
+  margin: 0;
+  padding: 0;
+  width: 28px;
+}
+
+.sidebar #share ul li p {
+  font-size: 12px;
+  line-height: 1;
+  margin: 0;
+  opacity: .75;
+}
+
+#share ul li {
+  height: 28px;
+  margin: 0;
+  padding: 0;
+  width: 28px;
+}
+
+.sidebar #share ul li:first-child {
+  display: flex;
+  height: 28px;
+}
+
+footer {
+  bottom: 0%;
+  right: 0px;
+  width: 100%;
+}
+
+footer ul {
+  display: flex;
+  padding: 0;
+}
+
+.arrow {
+  font-size: 60%;
+  margin: 0;
+  opacity: .75;
+}
+
+footer ul li a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.inc {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+  padding: 0;
+}
+
+/* wide size */
+@media screen and (min-width: 991px) and (min-height: 671px) {
+
+  /*.narrow h2とh3 を消す*/
+  .narrow {
+    display: none;
+  }
+
+  header {
+    align-items: flex-start;
+    display: flex;
+    justify-content: flex-end;
+    padding: auto;
+    vertical-align:top;
+  }
+
+  #service-logo {
+    margin-right: auto;
+  }
+
+  .main-content {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: 560px;
+    justify-content: space-between;
+    left: 50%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 924px;
+  }
+
+  .iphone-area {
+    height: 560px;
+    margin: 0;
+    padding: 0;
+    width: 308px;
+  }
+
+  .content-area {
+    box-sizing: border-box;
+    height: 406px;
+    margin: 0 0 0 28px;
+    padding: 0 28px;
+    width: 588px;
+  }
+
+  .wide h2{
+    color: #fff;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 1.125;
+    margin: 0;
+    margin-top:5px;
+  }
+
+  .wide h3{
+    color: #fff;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 1.33333;
+    margin: 0;
+    margin-top:23px;
+  }
+
+  .store-link ul {
+    margin: 35px 0 30px 0;
+  }
+
+  .sidebar {
+    bottom: 50%;
+    height: 252px;
+    margin:  0;
+    position: absolute;
+    padding: 0;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+  }
+
+  #share ul{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 252px;
+    list-style: none;
+    padding:0 0 0 7px;
+    width: 28px;
+  }
+
+  #share ul li{
+    margin-top: 14px;
+  }
+
+  .sidebar #share ul li:first-child {
+    height: 14px;
+    margin-top: 0;
+  }
+
+  footer {
+    position: absolute;
+  }
+
+  footer ul{
+    align-items: flex-end;
+    flex-direction: row;
+    margin: 0;
+  }
+
+  footer ul li p{
+    margin: 0;
+  }
+
+  footer ul li a{
+    margin-right: 28px;
+  }
+
+  .inc {
+    margin: 0 0 0 auto;
+    opacity: .75;
+  }
+
+}
+
+/*narrow size*/
+@media screen and (max-width: 990px), screen and (max-height: 670px) {
+
+  .wide {
+    display: none;
+  }
+
+  body {
+    background-color: #0a1319;
+    background-repeat:no-repeat;
+    height:auto !important;
+    text-align: center;
+  }
+
+  header {
+    align-items: center;
+    display:flex;
+    flex-direction: column-reverse;
+    height: 98px;
+    margin-bottom: 28px;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: auto;
+    width: 100%;
+  }
+
+  #iphone {
+    height: 560px;
+    margin: 0;
+  }
+
+  .narrow h2 {
+    display: block;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.25;
+    margin: 0;
+    margin-bottom: 14px;
+    order: 1;
+  }
+
+  .content-area {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .narrow h3 {
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.33333;
+    margin: 0;
+    margin-top:14px;
+    width: 100%;
+  }
+
+  .store-link ul {
+    display: block;
+    justify-content: center;
+    margin: 36px 0 43px 0;
+  }
+
+  .sidebar {
+    border-bottom: 1px solid #aaa;
+    border-top: 1px solid #aaa;
+    box-sizing: border-box;
+    height: 56px;
+    padding: 14px 0;
+  }
+
+  #share ul {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+  }
+
+  #share ul li {
+    margin: 0 7px;
+  }
+
+  .sidebar #share ul li:first-child {
+    align-items: center;
+  }
+
+  footer ul {
+    display: block;
+    flex-direction:column;
+    margin: 27px 0 0 0;
+  }
+
+  .link {
+    margin: 0;
+    height: 14px;
+  }
+
+  footer ul li {
+    margin: 0 14px;
+  }
+
+  footer ul li p {
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+    margin: auto 0 0 0 ;
+    opacity: .75;
+  }
+
+  .inc {
+    margin-top: 28px;
+  }
+
+}
