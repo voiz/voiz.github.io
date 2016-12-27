@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/*リセットCSS*/
+/* Reset */
 html, body, div, span,
 h1, h2, h3, p,img,
 ul, li, a,
@@ -69,6 +69,32 @@ h1 {
 h1 img {
   height: 56px;
   width: 210px;
+}
+
+#language {
+  margin: 0;
+  padding: 0;
+}
+
+#language ul {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#language ul li span {
+  opacity: .3;
+}
+
+#language ul li a {
+  color: #fff;
+  opacity: .6;
+  text-decoration: none;
+}
+
+#language ul li a.current {
+  opacity: 1;
 }
 
 #iphone img {
@@ -173,6 +199,14 @@ footer ul li a {
 
   #service-logo {
     margin-right: auto;
+  }
+
+  #language ul {
+   	align-items:center;
+   	color: #fff;
+   	display: flex;
+   	flex-direction: row;
+   	line-height: 1;
   }
 
   .main-content {
@@ -301,6 +335,18 @@ footer ul li a {
     flex-direction: column-reverse;
     height: 98px;
     margin-bottom: 28px;
+  }
+
+  #language {
+    height: 42px;
+    width: 100%;
+  }
+
+  #language ul {
+   	align-items: center;
+   	display: flex;
+   	flex-direction: row;
+   	justify-content:flex-end;
   }
 
   .main-content {

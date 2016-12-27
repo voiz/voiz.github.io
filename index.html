@@ -10,16 +10,19 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" >
 <script src="js/jquery-3.1.1.min.js" charset="utf-8"></script>
 <script src="js/jquery.localize.min.js" charset="utf-8"></script>
-  <script>
-  $(document).ready(function() {
-    $("[data-localize]").localize("localize", {
-      skipLanguage: "en",
-      callback: function(data, defaultCallback) {
-        console.log(data);
-      }
-    });
+<script>
+  $(function() {
+		$(".locale").on("click", function() {
+			var locale = $(this).attr("data-locale");
+			console.log(locale);
+    	$("[data-localize]").localize("locale", {
+    	  pathPrefix: "locales",
+				language: locale
+    	});
+			$(".locale").toggleClass("current");
+		});
   });
-  </script>
+</script>
 </head>
 <body>
   <div class="container">
@@ -27,10 +30,17 @@
       <div id="service-logo">
         <h1><img src="img/logo.png" alt="Voiz"></h1>
       </div>
+			<nav id="language">
+        <ul>
+          <li><a href="#" class="locale current" data-locale="en">EN</a></li>
+          <li><span class="middledot">・</span></li>
+          <li><a href="#" class="locale" data-locale="ja">JP</a></li>
+        </ul>
+      </nav>
     </header>
       <div class="main-content">
         <div class="narrow">
-          <h2>A memo app for<br> recording your thoughts<br> on the spot</h2>
+          <h2 data-localize="copy">A memo app for<br> recording your thoughts<br> on the spot</h2>
         </div>
         <div class="iphone-area">
           <div id="iphone">
@@ -41,7 +51,7 @@
         </div>
         <div class="content-area">
           <div class="wide">
-            <h2>A memo app for<br> recording your<br> thoughts on the spot</h2>
+            <h2 data-localize="copy">A memo app for<br> recording your<br> thoughts on the spot</h2>
             <h3>Description will enter. Dummy is a sentence. Here contains the description.Description will enter. Dummy is a sentence. Here contains the description.</h3>
           </div>
           <div class="narrow">
