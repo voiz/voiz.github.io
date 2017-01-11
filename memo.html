@@ -19,6 +19,9 @@
 				language: locale
     	});
 			$(".locale").toggleClass("current");
+
+      var movieSrc = "img/movie_" + locale + ".gif";
+      $("#movie").attr('src', movieSrc);
 		});
   });
 </script>
@@ -43,10 +46,8 @@
         </div>
         <div class="iphone-area">
           <div id="iphone">
-            <img src="img/bg_movie.png" alt="iphone">
+            <img id="movie" src="img/movie_en.gif">
           </div>
-          <div id="iphone-inner">
-           </div>
         </div>
         <div class="content-area">
           <div class="wide">

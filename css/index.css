@@ -97,9 +97,19 @@ h1 img {
   opacity: 1;
 }
 
-#iphone img {
+#iphone {
+  background-image: url(../img/bg_movie.png);
+  background-size: 100% 100%;
   height: 560px;
+  margin: 0 auto;
+  text-align: center;
   width: 308px;
+}
+
+#iphone img {
+  height: 392px;
+  margin-top: 84px;
+  width: 220px;
 }
 
 .store-link ul {
@@ -355,11 +365,6 @@ footer ul li a {
     height: 100%;
     margin: auto;
     width: 100%;
-  }
-
-  #iphone {
-    height: 560px;
-    margin: 0;
   }
 
   .narrow h2 {
