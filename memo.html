@@ -14,7 +14,6 @@
   $(function() {
 		$(".locale").on("click", function() {
 			var locale = $(this).attr("data-locale");
-			console.log(locale);
     	$("[data-localize]").localize("locale", {
     	  pathPrefix: "locales",
 				language: locale
@@ -52,10 +51,10 @@
         <div class="content-area">
           <div class="wide">
             <h2 data-localize="copy">A memo app for<br> recording your<br> thoughts on the spot</h2>
-            <h3>Description will enter. Dummy is a sentence. Here contains the description.Description will enter. Dummy is a sentence. Here contains the description.</h3>
+            <h3 data-localize="description">1. Say it as soon as you think it.　2. The words you say will be analyzed and recorded as text.　3. Send as a message.</h3>
           </div>
           <div class="narrow">
-            <h3>Description will enter. Dummy is<br> a sentence. Here contains the<br> description.Description will<br> enter. Dummy is a sentence.<br> Here contains the description.</h3>
+            <h3 data-localize="description">1. Say it as soon as you think it.　2. The words you say will be analyzed and recorded as text.　3. Send as a message.</h3>
           </div>
           <nav class="store-link">
             <ul>

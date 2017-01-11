@@ -1,5 +1,6 @@
 {
   "copy": "A memo app for<br>recording your thoughts<br>on the spot",
+  "description": "1. Say it as soon as you think it.　2. The words you say will be analyzed and recorded as text.　3. Send as a message.",
   "terms": "Terms of Use",
   "privacy": "Privacy Policy"
 }
